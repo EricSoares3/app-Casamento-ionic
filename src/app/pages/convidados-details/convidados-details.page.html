@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot='start'>
+      <ion-back-button defaultHref='/home'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes Convidados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list lines='full'>
+    <ion-item>
+        <!-- <ion-label stacked>Username</ion-label> -->
+      <ion-input required type='text' placeholder="Escreva seu nome aqui" [(ngModel)]="convidado.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type='text' placeholder='Responda sim ou não' [(ngModel)]="convidado.answer"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type='text' placeholder='Caso vc não vá, escreva aqui o motivo...' class="input-text" [(ngModel)]="convidado.text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="saveConvidado()">Save</ion-button>
+</ion-content>
